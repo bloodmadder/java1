@@ -372,9 +372,6 @@ public class Main {
 
         System.out.println("\n=== TESTING LINKEDLIST ===");
         testLinkedList();
-
-        System.out.println("\n=== POLYMORPHIC USAGE ===");
-        testPolymorphism();
     }
 
     private static void testArrayList() {
@@ -436,32 +433,4 @@ public class Main {
         System.out.println("Index of 'Third': " + list.indexOf("Third"));
     }
 
-    private static void testPolymorphism() {
-        System.out.println("Using MyList interface:");
-
-        MyList<Integer> arrayList = new MyArrayList<>();
-        MyList<String> linkedList = new MyLinkedList<>();
-
-        // Используем общие методы
-        arrayList.add(10);
-        arrayList.add(20);
-        arrayList.add(30);
-
-        linkedList.add("Hello");
-        linkedList.add("World");
-        linkedList.add("!");
-
-        System.out.println("ArrayList: " + arrayList);
-        System.out.println("LinkedList: " + linkedList);
-
-        System.out.println("ArrayList size: " + arrayList.size());
-        System.out.println("ArrayList contains 20? " + arrayList.contains(20));
-
-        arrayList.remove(1);
-        linkedList.remove(0);
-
-        System.out.println("After removal:");
-        System.out.println("ArrayList: " + arrayList);
-        System.out.println("LinkedList: " + linkedList);
-    }
 }
